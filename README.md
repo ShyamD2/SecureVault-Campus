@@ -24,7 +24,7 @@
 ## 🏗️ Architecture Diagram
 
 <p align="center">
-  <img src="images/architecture.jpeg" alt="SecureVault Campus Architecture" width="1000">
+  <img src="./images/architecture-diagram.png" alt="SecureVault Campus Architecture" width="1000">
 </p>
 # 📖 Overview
 
