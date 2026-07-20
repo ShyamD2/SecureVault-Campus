@@ -1,0 +1,39 @@
+{
+
+    GUID = '11111111-2222-3333-4444-555555555555'
+
+    Author = 'Shyam Kumar D'
+
+    CompanyName = 'SecureVault Campus'
+
+    Copyright = '(c) 2026'
+
+    Description = 'JEA Role Capability for SecureVault Campus'
+
+    VisibleCmdlets = @(
+        'Get-Service',
+        'Restart-Service',
+        'Get-Process',
+        'Get-EventLog'
+    )
+
+    VisibleFunctions = @()
+
+    VisibleAliases = @()
+
+    VisibleExternalCommands = @()
+
+    ScriptsToProcess = @()
+
+    AliasesToExport = @()
+
+    FunctionDefinitions = @()
+
+    VariableDefinitions = @()
+
+    EnvironmentVariables = @()
+
+    TypesToProcess = @()
+
+    FormatsToProcess = @()
+}

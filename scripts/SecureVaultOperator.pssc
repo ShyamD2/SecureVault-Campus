@@ -1,0 +1,35 @@
+@{
+
+    SchemaVersion = '2.0.0.0'
+
+    GUID = '99999999-8888-7777-6666-555555555555'
+
+    Author = 'Shyam Kumar D'
+
+    CompanyName = 'SecureVault Campus'
+
+    Copyright = '(c) 2026'
+
+    Description = 'JEA Session Configuration for SecureVault Campus'
+
+    SessionType = 'RestrictedRemoteServer'
+
+    RunAsVirtualAccount = $true
+
+    TranscriptDirectory = 'C:\JEA_Transcripts'
+
+    RoleDefinitions = @{
+
+        'SECUREVAULT\jessy.pinkman' = @{
+
+            RoleCapabilities = 'SecureVaultOperator'
+
+        }
+
+    }
+
+    LanguageMode = 'NoLanguage'
+
+    ExecutionPolicy = 'RemoteSigned'
+
+}

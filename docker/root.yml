@@ -1,0 +1,17 @@
+- !policy
+  id: securevault-campus
+
+  body:
+
+    - !host
+      id: campus-webapp
+
+    - !variable
+      id: db-password
+
+    - !permit
+      role: !host campus-webapp
+      privilege:
+        - read
+        - execute
+      resource: !variable db-password
