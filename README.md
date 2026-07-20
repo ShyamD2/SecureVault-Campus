@@ -20,9 +20,12 @@
 ![VirtualBox](https://img.shields.io/badge/Oracle-VirtualBox-blue)
 
 ---
-# 🏗️ Architecture Diagram
 
-![Architecture](images/architecture.png)
+## 🏗️ Architecture Diagram
+
+<p align="center">
+  <img src="images/architecture.jpeg" alt="SecureVault Campus Architecture" width="1000">
+</p>
 # 📖 Overview
 
 SecureVault Campus is a self-built Privileged Access Management (PAM) lab designed to demonstrate the core concepts behind CyberArk PAM using freely available technologies.
