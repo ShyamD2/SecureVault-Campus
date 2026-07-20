@@ -1,214 +1,416 @@
-<p align="center">
-  <img src="images/banner.png" alt="SecureVault Campus Banner" width="100%">
+<div align="center">
+
+<img src="images/banner.png" alt="SecureVault Campus Banner" width="100%">
+
+# 🔐 SecureVault Campus
+
+### Simulated Privileged Access Management (PAM) Lab
+**CyberArk Conjur Open Source · Windows Active Directory · Microsoft LAPS · PowerShell JEA**
+
+<p>
+A self-built enterprise-style lab recreating the core pillars of CyberArk PAM —<br/>
+Identity Management · Password Rotation · Least Privilege · Secrets Management
 </p>
 
-🔐 SecureVault Campus
-![Windows Server](https://img.shields.io/badge/Windows_Server-2025-blue?style=for-the-badge&logo=windows)
-![PowerShell](https://img.shields.io/badge/PowerShell-5.1-blue?style=for-the-badge&logo=powershell)
-![Active Directory](https://img.shields.io/badge/Active_Directory-AD_DS-0052CC?style=for-the-badge)
-![Windows LAPS](https://img.shields.io/badge/Windows-LAPS-success?style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker)
-![CyberArk Conjur](https://img.shields.io/badge/CyberArk-Conjur-orange?style=for-the-badge)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-E95420?style=for-the-badge&logo=ubuntu)
-![VirtualBox](https://img.shields.io/badge/VirtualBox-7.x-blue?style=for-the-badge&logo=virtualbox)
-> A Simulated Privileged Access Management (PAM) Lab using CyberArk Conjur Open Source, Windows Server Active Directory, Windows LAPS and PowerShell JEA.
-
-![Platform](https://img.shields.io/badge/Platform-Windows%20%26%20Ubuntu-blue)
-![CyberArk](https://img.shields.io/badge/CyberArk-Conjur-orange)
-![PowerShell](https://img.shields.io/badge/PowerShell-5.1-blue)
-![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED)
-![VirtualBox](https://img.shields.io/badge/Oracle-VirtualBox-blue)
-
----
-
-## 🏗️ Architecture Diagram
-
-<p align="center">
-  <img src="./images/architecture-diagram.png" alt="SecureVault Campus Architecture" width="1000">
+<p>
+  <img src="https://img.shields.io/badge/Windows_Server-2025-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Server">
+  <img src="https://img.shields.io/badge/Active_Directory-AD_DS-0052CC?style=for-the-badge&logo=microsoft&logoColor=white" alt="Active Directory">
+  <img src="https://img.shields.io/badge/Windows-LAPS-00A4EF?style=for-the-badge&logo=windows&logoColor=white" alt="Windows LAPS">
+  <img src="https://img.shields.io/badge/PowerShell-JEA-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell JEA">
+  <img src="https://img.shields.io/badge/CyberArk-Conjur_OSS-FF6600?style=for-the-badge" alt="CyberArk Conjur">
+  <img src="https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu">
+  <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/VirtualBox-7.x-183A61?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox">
 </p>
-# 📖 Overview
 
-SecureVault Campus is a self-built Privileged Access Management (PAM) lab designed to demonstrate the core concepts behind CyberArk PAM using freely available technologies.
+<p>
+  <img src="https://img.shields.io/github/last-commit/ShyamD2/SecureVault-Campus?style=flat-square&color=blue" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/ShyamD2/SecureVault-Campus?style=flat-square&color=blue" alt="Repo Size">
+  <img src="https://img.shields.io/github/stars/ShyamD2/SecureVault-Campus?style=flat-square&color=yellow" alt="Stars">
+  <img src="https://img.shields.io/github/license/ShyamD2/SecureVault-Campus?style=flat-square&color=green" alt="License">
+</p>
 
-The project simulates enterprise privileged access management by combining:
+**[📖 Documentation](docs/) · [🏗 Architecture](ARCHITECTURE.md) · [⚙️ Installation](INSTALLATION.md) · [📸 Screenshots](#-screenshots)**
 
-- Windows Server 2025 Active Directory
-- Windows LAPS
-- PowerShell JEA
-- CyberArk Conjur Open Source
-- Docker
-- Oracle VirtualBox
-
----
-
-# 🏗 Architecture
-
-DC01
-- Active Directory
-- DNS
-- Group Policy
-
-↓
-
-CLIENT01
-
-- Domain Joined Server
-- Windows LAPS
-- JEA Restricted Endpoint
-
-↓
-
-CONJURVM
-
-- Ubuntu Server
-- Docker
-- CyberArk Conjur Open Source
+</div>
 
 ---
 
-# 🚀 Features
+## 📑 Table of Contents
 
-✅ Active Directory Domain
-
-✅ Organizational Units
-
-✅ Domain Users
-
-✅ Domain Joined Server
-
-✅ Windows LAPS
-
-✅ Password Rotation
-
-✅ Just Enough Administration (JEA)
-
-✅ CyberArk Conjur Open Source
-
-✅ Secret Management
-
-✅ Docker Deployment
-
-✅ PowerShell Automation
+- [Overview](#-overview)
+- [Why This Project Matters](#-why-this-project-matters)
+- [Architecture](#-architecture)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Repository Structure](#-repository-structure)
+- [Project Workflow](#-project-workflow)
+- [Screenshots](#-screenshots)
+- [Technical Deep Dive](#-technical-deep-dive)
+- [Skills Demonstrated](#-skills-demonstrated)
+- [Lessons Learned & Roadmap](#-lessons-learned--roadmap)
+- [Documentation](#-documentation)
+- [Author](#-author)
 
 ---
 
-# 🛠 Technologies
+## 📖 Overview
 
-- Windows Server 2025
-- Ubuntu Server 24.04
-- Active Directory
-- Group Policy
-- Windows LAPS
-- PowerShell
-- Docker
-- Docker Compose
-- CyberArk Conjur OSS
-- Oracle VirtualBox
+**SecureVault Campus** is a hands-on Privileged Access Management lab built from the ground up to demonstrate the concepts that sit at the core of **CyberArk's PAM suite** — using free, industry-standard tooling instead of a commercial license.
+
+The lab provisions a small three-tier "campus" domain and layers four PAM disciplines on top of it:
+
+| Discipline | Technology | CyberArk Equivalent |
+|---|---|---|
+| Identity foundation | Active Directory Domain Services + OUs | Core PAS identity store |
+| Local admin password rotation | Windows LAPS | CPM (Central Policy Manager) |
+| Least-privilege administration | PowerShell JEA | PSM / restricted sessions |
+| Secrets management & retrieval | CyberArk Conjur OSS on Docker | Conjur Enterprise / AAM |
+
+Every component was deployed, configured, and verified inside an isolated VirtualBox network — no cloud credits, no trial license, just the same architecture patterns used in production PAM deployments.
 
 ---
 
-# 📂 Project Structure
+## 🎯 Why This Project Matters
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**For Recruiters**
+
+This isn't a tutorial clone. It's an original lab that maps 1:1 onto real enterprise PAM job requirements: rotating privileged credentials, enforcing least privilege, centralizing secrets, and auditing access — the exact language used in CyberArk Engineer, IAM Analyst, and Cloud Security job descriptions.
+
+</td>
+<td width="50%" valign="top">
+
+**For the Security Community**
+
+Windows LAPS, JEA, and Conjur OSS are each individually well documented — but rarely wired together into one coherent PAM story. This repo shows how they compose into a single privileged-access control plane.
+
+</td>
+</tr>
+</table>
+
+**Concepts demonstrated:**
+`Least Privilege` · `Password Rotation` · `Secrets Management` · `Role-Based Access Control` · `Audit Logging` · `Identity Segmentation` · `Infrastructure Hardening`
+
+---
+
+## 🏗 Architecture
+
+```mermaid
+flowchart TB
+    INET([Internet])
+
+    subgraph LAB["SecureVault Campus — Isolated VirtualBox Network"]
+        direction TB
+
+        subgraph DC["DC01 — Windows Server 2025"]
+            AD[Active Directory Domain Services]
+            DNS[DNS Server]
+            GPO[Group Policy — LAPS Policy]
+        end
+
+        subgraph CLIENT["CLIENT01 — Domain-Joined Server"]
+            LAPS[Windows LAPS Agent]
+            JEA[PowerShell JEA Restricted Endpoint]
+        end
+
+        subgraph CONJ["CONJURVM — Ubuntu Server 24.04"]
+            DOCKER[Docker Engine]
+            CONJUR[CyberArk Conjur OSS]
+            PG[(Conjur Backend DB)]
+        end
+    end
+
+    ADMIN([Security Engineer])
+
+    INET -.->|Package Updates Only| LAB
+    ADMIN -->|1 - Authenticate| AD
+    AD -->|2 - Apply LAPS GPO| GPO
+    GPO -->|3 - Rotate Local Admin Password| LAPS
+    ADMIN -->|4 - Connect via JEA| JEA
+    JEA -->|Restricted Cmdlet Set Only| CLIENT
+    ADMIN -->|5 - Authenticate and Fetch Secret| CONJUR
+    CONJUR --> DOCKER
+    DOCKER --> PG
+    AD -.->|Domain Trust| CLIENT
+```
+
+**Flow summary**
+
+1. **DC01** is the domain controller — it hosts AD DS, DNS, and the Group Policy that drives LAPS rotation.
+2. **CLIENT01** is domain-joined and receives the LAPS policy, rotating its local administrator password on schedule. Administrators only ever touch it through a **JEA restricted endpoint** — never a full admin shell.
+3. **CONJURVM** runs CyberArk Conjur OSS in Docker on Ubuntu, acting as the secrets vault for application credentials (e.g. `db-password`), retrievable only by authorized hosts/roles defined in Conjur policy.
+
+📄 Full breakdown with authentication and password-rotation sequence diagrams: **[ARCHITECTURE.md](ARCHITECTURE.md)**
+
+---
+
+## 🚀 Features
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🏢 Identity & Access
+- Active Directory Domain Services
+- Organizational Unit design
+- Domain user & computer objects
+- Domain-joined member server
+
+</td>
+<td width="33%" valign="top">
+
+### 🔑 Privileged Access
+- Windows LAPS password rotation
+- Automated LAPS audit reporting
+- PowerShell JEA restricted sessions
+- Role-scoped cmdlet allow-lists
+
+</td>
+<td width="33%" valign="top">
+
+### 🗝️ Secrets Management
+- CyberArk Conjur OSS (Docker)
+- Policy-as-code secret definitions
+- Host-based authorization (RBAC)
+- Secure secret retrieval via CLI
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠 Tech Stack
+
+<table>
+<tr><td><b>Platform</b></td><td>Windows Server 2025 · Ubuntu Server 24.04 LTS · Oracle VirtualBox 7.x</td></tr>
+<tr><td><b>Identity</b></td><td>Active Directory Domain Services · DNS · Group Policy</td></tr>
+<tr><td><b>Privileged Access</b></td><td>Windows LAPS · PowerShell 5.1 · PowerShell JEA</td></tr>
+<tr><td><b>Secrets</b></td><td>CyberArk Conjur Open Source · Docker · Docker Compose</td></tr>
+<tr><td><b>Tooling</b></td><td>Git · GitHub · PowerShell scripting</td></tr>
+</table>
+
+---
+
+## 📂 Repository Structure
 
 ```text
-SecureVault-Campus
+SecureVault-Campus/
 │
-├── docs
-├── docker
-├── diagrams
-├── screenshots
-├── scripts
-└── README.md
+├── README.md                    → You are here
+├── ARCHITECTURE.md              → Detailed architecture + sequence diagrams
+├── INSTALLATION.md              → Step-by-step lab build guide
+├── SECURITY.md                  → Threat model & security notes
+├── CONTRIBUTING.md              → Contribution guidelines
+├── LICENSE                      → MIT License
+│
+├── docker/
+│   └── root.yml                 → Conjur policy: hosts, variables, permissions
+│
+├── scripts/
+│   ├── SecureVault-LAPSReport.ps1     → LAPS password/expiration audit report
+│   ├── SecureVaultOperator.pssc       → JEA session configuration
+│   └── SecureVaultOperator.psrc       → JEA role capability (allowed cmdlets)
+│
+├── images/
+│   ├── banner.png                → Repository hero banner
+│   └── architecture-diagram.png  → Original architecture sketch
+│
+├── screenshots/                  → 11 annotated evidence screenshots
+│   └── 01–11 ...
+│
+└── docs/
+    └── SecureVault-Campus-Project-Report.pdf   → Full written project report
 ```
 
 ---
 
-## 📸 Project Screenshots
+## 🔄 Project Workflow
 
-### Active Directory Structure
-![AD Structure](screenshots/05-active-directory-structure.png)
-
-### Domain Joined Client Verification
-![Client Verification](screenshots/06-domain-joined-client-verification.png)
-
-### Windows LAPS Password Retrieval
-![LAPS Password](screenshots/04-windows-laps-password-retrieval.png)
-
-### LAPS Password Report
-![LAPS Report](screenshots/02-laps-password-report-script.png)
-
-### PowerShell JEA Restricted Session
-![JEA Session](screenshots/08-jea-restricted-powershell-session.png)
-
-### Available Commands in JEA
-![JEA Commands](screenshots/09-jea-available-commands.png)
-
-### LAPS Group Policy
-![LAPS GPO](screenshots/07-laps-group-policy.png)
-
-### CyberArk Conjur Docker Services
-![Docker Services](screenshots/10-conjur-docker-services.png)
-
-### Conjur Policy & Secret Retrieval
-![Conjur Policy](screenshots/01-conjur-policy-and-secret-retrieval.png)
-
-### Conjur Secret Management
-![Conjur Secret](screenshots/11-conjur-secret-management.png)
-
-# 🎯 Learning Outcomes
-
-This project demonstrates practical knowledge of:
-
-- Identity Management
-- Privileged Access Management
-- Least Privilege
-- Secret Management
-- Windows Administration
-- Linux Administration
-- Docker
-- PowerShell Automation
+```mermaid
+flowchart LR
+    A[Provision VMs] --> B[Configure AD DS + DNS]
+    B --> C[Create OUs and Domain Users]
+    C --> D[Join CLIENT01 to Domain]
+    D --> E[Deploy LAPS GPO]
+    E --> F[Rotate Local Admin Passwords]
+    F --> G[Configure JEA Endpoint]
+    G --> H[Deploy Conjur on Docker]
+    H --> I[Define Conjur Policy]
+    I --> J[Retrieve Secrets Securely]
+    J --> K[Audit and Report]
+```
 
 ---
-# 📖 Project Overview
 
-SecureVault Campus is a simulated enterprise Privileged Access Management (PAM) lab that demonstrates how organizations secure privileged accounts using Microsoft Active Directory, Windows LAPS, PowerShell Just Enough Administration (JEA), and CyberArk Conjur Open Source.
+## 📸 Screenshots
 
-The project simulates a production-style environment using three virtual machines connected through a secure virtual network. It showcases password rotation, least-privilege administration, secret management, and secure authentication workflows.
-# ✨ Key Features
+<table>
+<tr>
+<td width="50%">
 
-- Active Directory Domain Services (AD DS)
-- Organizational Unit (OU) Management
-- Domain User Management
-- Windows LAPS Password Rotation
-- PowerShell JEA Restricted Administration
-- CyberArk Conjur Open Source
-- Docker-based Secret Management
-- Secure Secret Retrieval
-- Least Privilege Administration
-- Role-Based Access Control (RBAC)
-# 🛠 Technologies Used
+**Conjur Policy & Secret Retrieval**
+<img src="screenshots/01-conjur-policy-and-secret-retrieval.png" width="100%">
 
-- Windows Server 2025
-- Ubuntu Server 24.04 LTS
-- Active Directory Domain Services
-- Windows LAPS
-- PowerShell
-- Docker Engine
-- Docker Compose
-- CyberArk Conjur Open Source
-- Oracle VirtualBox
+</td>
+<td width="50%">
 
-# 👨‍💻 Author
+**LAPS Password Report Script**
+<img src="screenshots/02-laps-password-report-script.png" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Active Directory Users**
+<img src="screenshots/03-active-directory-users.png" width="100%">
+
+</td>
+<td width="50%">
+
+**Windows LAPS Password Retrieval**
+<img src="screenshots/04-windows-laps-password-retrieval.png" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Active Directory OU Structure**
+<img src="screenshots/05-active-directory-structure.png" width="100%">
+
+</td>
+<td width="50%">
+
+**Domain-Joined Client Verification**
+<img src="screenshots/06-domain-joined-client-verification.png" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**LAPS Group Policy Configuration**
+<img src="screenshots/07-laps-group-policy.png" width="100%">
+
+</td>
+<td width="50%">
+
+**JEA Restricted PowerShell Session**
+<img src="screenshots/08-jea-restricted-powershell-session.png" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**JEA Available Commands (Allow-listed)**
+<img src="screenshots/09-jea-available-commands.png" width="100%">
+
+</td>
+<td width="50%">
+
+**Conjur Docker Services Running**
+<img src="screenshots/10-conjur-docker-services.png" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Conjur Secret Management**
+<img src="screenshots/11-conjur-secret-management.png" width="100%">
+
+</td>
+<td width="50%"></td>
+</tr>
+</table>
+
+---
+
+## 🔍 Technical Deep Dive
+
+<details>
+<summary><b>Why Active Directory?</b></summary><br>
+
+AD DS is the identity backbone almost every enterprise PAM deployment sits on top of — CyberArk's Vault, CPM, and PSM all integrate against it. Standing up a real domain (OUs, GPOs, domain-joined hosts) demonstrates the identity fundamentals PAM tooling depends on, rather than treating identity as a black box.
+</details>
+
+<details>
+<summary><b>Why Windows LAPS?</b></summary><br>
+
+LAPS solves the exact problem CyberArk's CPM solves at enterprise scale: **local administrator passwords that are unique per machine and rotated automatically**, eliminating shared local-admin credentials — one of the most common lateral-movement paths in real breaches.
+</details>
+
+<details>
+<summary><b>Why PowerShell JEA?</b></summary><br>
+
+JEA enforces **least privilege at the session level** — administrators connect through a constrained endpoint that only exposes an explicit allow-list of cmdlets (`Get-Service`, `Restart-Service`, `Get-Process`, `Get-EventLog` in this lab), mirroring how CyberArk's PSM brokers and restricts privileged sessions.
+</details>
+
+<details>
+<summary><b>Why CyberArk Conjur Open Source?</b></summary><br>
+
+Conjur is CyberArk's own open-source secrets manager, making it the most direct, resume-defensible way to demonstrate secrets-management concepts: policy-as-code, host-based authorization, and scoped secret retrieval — without needing an enterprise license.
+</details>
+
+---
+
+## 🧠 Skills Demonstrated
+
+`Identity & Access Management` `Privileged Access Management (PAM)` `Least Privilege Design` `Secrets Management` `Windows Server Administration` `Linux Administration` `Docker & Containerization` `PowerShell Scripting & Automation` `Group Policy Management` `Network Segmentation` `Security Documentation`
+
+---
+
+## 📈 Lessons Learned & Roadmap
+
+**Lessons learned**
+- Designing OU structure *before* writing GPOs prevented rework on LAPS scoping.
+- JEA's `NoLanguage` mode is strict by design — every cmdlet needed to be explicitly allow-listed and tested.
+- Conjur policy is genuinely "policy-as-code" — small YAML errors fail loudly, which forced disciplined syntax.
+
+**Known limitations**
+- Single-domain, single-forest lab (no cross-domain trust scenarios).
+- Conjur deployed in OSS/dev mode, not the HA/enterprise configuration.
+- No SIEM integration yet — audit logs are inspected manually.
+
+**Roadmap**
+- [ ] Integrate JEA transcript logs with a lightweight SIEM (e.g. Wazuh)
+- [ ] Add automated Conjur policy validation in CI
+- [ ] Extend to a second domain to simulate a trust relationship
+- [ ] Add Terraform/Vagrant for one-command lab provisioning
+
+---
+
+## 📚 Documentation
+
+| Document | Description |
+|---|---|
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Full architecture, network design, and sequence diagrams |
+| [INSTALLATION.md](INSTALLATION.md) | Step-by-step guide to rebuild the lab from scratch |
+| [SECURITY.md](SECURITY.md) | Threat model, hardening notes, and responsible use |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to propose changes or extensions |
+| [Project Report (PDF)](docs/SecureVault-Campus-Project-Report.pdf) | Full written report |
+
+---
+
+## 👨‍💻 Author
 
 **Shyam Kumar D**
+*Aspiring Cloud Infrastructure & CyberArk PAM Engineer*
 
-LinkedIn
-
-https://linkedin.com/in/shyam-kumar-d
-
-GitHub
-
-https://github.com/ShyamD2
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-shyam--kumar--d-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shyam-kumar-d)
+[![GitHub](https://img.shields.io/badge/GitHub-ShyamD2-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ShyamD2)
 
 ---
 
-⭐ If you like this project, consider giving it a Star!
+<div align="center">
+
+⭐ **If this project helped you understand PAM concepts, consider giving it a star.**
+
+</div>
