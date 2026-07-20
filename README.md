@@ -1,5 +1,12 @@
 # 🔐 SecureVault Campus
-
+![Windows Server](https://img.shields.io/badge/Windows_Server-2025-blue?style=for-the-badge&logo=windows)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1-blue?style=for-the-badge&logo=powershell)
+![Active Directory](https://img.shields.io/badge/Active_Directory-AD_DS-0052CC?style=for-the-badge)
+![Windows LAPS](https://img.shields.io/badge/Windows-LAPS-success?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker)
+![CyberArk Conjur](https://img.shields.io/badge/CyberArk-Conjur-orange?style=for-the-badge)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-E95420?style=for-the-badge&logo=ubuntu)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-7.x-blue?style=for-the-badge&logo=virtualbox)
 > A Simulated Privileged Access Management (PAM) Lab using CyberArk Conjur Open Source, Windows Server Active Directory, Windows LAPS and PowerShell JEA.
 
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%26%20Ubuntu-blue)
@@ -9,7 +16,9 @@
 ![VirtualBox](https://img.shields.io/badge/Oracle-VirtualBox-blue)
 
 ---
+# 🏗️ Architecture Diagram
 
+![Architecture](images/architecture.png)
 # 📖 Overview
 
 SecureVault Campus is a self-built Privileged Access Management (PAM) lab designed to demonstrate the core concepts behind CyberArk PAM using freely available technologies.
@@ -152,6 +161,34 @@ This project demonstrates practical knowledge of:
 - PowerShell Automation
 
 ---
+# 📖 Project Overview
+
+SecureVault Campus is a simulated enterprise Privileged Access Management (PAM) lab that demonstrates how organizations secure privileged accounts using Microsoft Active Directory, Windows LAPS, PowerShell Just Enough Administration (JEA), and CyberArk Conjur Open Source.
+
+The project simulates a production-style environment using three virtual machines connected through a secure virtual network. It showcases password rotation, least-privilege administration, secret management, and secure authentication workflows.
+# ✨ Key Features
+
+- Active Directory Domain Services (AD DS)
+- Organizational Unit (OU) Management
+- Domain User Management
+- Windows LAPS Password Rotation
+- PowerShell JEA Restricted Administration
+- CyberArk Conjur Open Source
+- Docker-based Secret Management
+- Secure Secret Retrieval
+- Least Privilege Administration
+- Role-Based Access Control (RBAC)
+# 🛠 Technologies Used
+
+- Windows Server 2025
+- Ubuntu Server 24.04 LTS
+- Active Directory Domain Services
+- Windows LAPS
+- PowerShell
+- Docker Engine
+- Docker Compose
+- CyberArk Conjur Open Source
+- Oracle VirtualBox
 
 # 👨‍💻 Author
 
