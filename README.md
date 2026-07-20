@@ -369,24 +369,31 @@ Conjur is CyberArk's own open-source secrets manager, making it the most direct,
 
 ## 📈 Lessons Learned & Roadmap
 
-**Lessons learned**
-- Designing OU structure *before* writing GPOs prevented rework on LAPS scoping.
-- JEA's `NoLanguage` mode is strict by design — every cmdlet needed to be explicitly allow-listed and tested.
-- Conjur policy is genuinely "policy-as-code" — small YAML errors fail loudly, which forced disciplined syntax.
+**Challenges faced & resolved**
 
-**Known limitations**
-- Single-domain, single-forest lab (no cross-domain trust scenarios).
-- Conjur deployed in OSS/dev mode, not the HA/enterprise configuration.
-- No SIEM integration yet — audit logs are inspected manually.
+- **Docker GPG key conflicts on Ubuntu** — Docker's apt repo setup failed on CONJURVM due to a stale 
+  GPG keyring from a prior attempt. Fixed by removing the old keyring, re-adding Docker's key with 
+  `gpg --dearmor`, and re-pointing the apt source list to the correctly signed repo.
+- **Disk space management across 3 concurrent VMs** — Only 45 GB free for three VMs. Installed CLIENT01 
+  as Server Core (not Desktop Experience) to roughly halve its footprint, deleted installer ISOs immediately 
+  after each VM was built, and used `VBoxManage modifymedium --compact` to reclaim space from 
+  dynamically-allocated disks.
+- **LAPS password not appearing after GPO link** — First `Get-LapsADPassword` query returned nothing 
+  because the policy hadn't propagated. Resolved with `gpupdate /force` + a restart to trigger the LAPS 
+  scheduled task on boot.
+
+**Design honesty**
+
+Where CyberArk's licensed components (CPM, PSM) weren't available, I substituted genuine functional 
+equivalents rather than skipping the concept — Windows LAPS for CPM's password rotation, PowerShell JEA 
+for PSM's restricted sessions. Wherever CyberArk *does* publish a free product, I used the real thing: Conjur 
+Open Source runs unmodified. Every substitution is disclosed explicitly rather than implied away.
 
 **Roadmap**
 - [ ] Integrate JEA transcript logs with a lightweight SIEM (e.g. Wazuh)
-- [ ] Add automated Conjur policy validation in CI
+- [ ] Explore Conjur's dynamic secrets and rotation features
+- [ ] Connect a real application to Conjur to fetch its DB credential at runtime
 - [ ] Extend to a second domain to simulate a trust relationship
-- [ ] Add Terraform/Vagrant for one-command lab provisioning
-
----
-
 ## 📚 Documentation
 
 | Document | Description |
