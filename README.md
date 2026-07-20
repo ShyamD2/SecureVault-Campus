@@ -1,4 +1,8 @@
-# 🔐 SecureVault Campus
+<p align="center">
+  <img src="images/banner.png" alt="SecureVault Campus Banner" width="100%">
+</p>
+
+# SecureVault Campus# 🔐 SecureVault Campus
 ![Windows Server](https://img.shields.io/badge/Windows_Server-2025-blue?style=for-the-badge&logo=windows)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1-blue?style=for-the-badge&logo=powershell)
 ![Active Directory](https://img.shields.io/badge/Active_Directory-AD_DS-0052CC?style=for-the-badge)
