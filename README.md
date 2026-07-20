@@ -106,20 +106,37 @@ SecureVault-Campus
 
 ---
 
-# 📸 Screenshots
+## 📸 Project Screenshots
 
-Add screenshots here.
+### Active Directory Structure
+![AD Structure](screenshots/05-active-directory-structure.png)
 
-Example:
+### Domain Joined Client Verification
+![Client Verification](screenshots/06-domain-joined-client-verification.png)
 
-- Active Directory
-- OU Structure
-- LAPS Password Rotation
-- JEA Session
-- Docker Containers
-- Conjur Secret Retrieval
+### Windows LAPS Password Retrieval
+![LAPS Password](screenshots/04-windows-laps-password-retrieval.png)
 
----
+### LAPS Password Report
+![LAPS Report](screenshots/02-laps-password-report-script.png)
+
+### PowerShell JEA Restricted Session
+![JEA Session](screenshots/08-jea-restricted-powershell-session.png)
+
+### Available Commands in JEA
+![JEA Commands](screenshots/09-jea-available-commands.png)
+
+### LAPS Group Policy
+![LAPS GPO](screenshots/07-laps-group-policy.png)
+
+### CyberArk Conjur Docker Services
+![Docker Services](screenshots/10-conjur-docker-services.png)
+
+### Conjur Policy & Secret Retrieval
+![Conjur Policy](screenshots/01-conjur-policy-and-secret-retrieval.png)
+
+### Conjur Secret Management
+![Conjur Secret](screenshots/11-conjur-secret-management.png)
 
 # 🎯 Learning Outcomes
 
